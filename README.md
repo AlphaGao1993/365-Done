@@ -20,6 +20,17 @@
 
 然后用单例封装了 Toast 和 SharedPreference，这基本上是我每个项目里的标配了。封装 Toast 使 App 全局 仅维护一个 Toast 实例，这样不会出现 Toast 延时和重叠的问题。SharedPreference 封装就是更加方便使用了，不用每次需要的的时候都重新实例化，当然跟前面的消息机制一样，没有特别考虑并发处理方面。
 
+### App 截图
+![](https://github.com/alphagao1993/365-Done/blob/master/images/01.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/02.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/03.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/04.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/05.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/06.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/07.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/08.png)
+![](https://github.com/alphagao1993/365-Done/blob/master/images/09.png)
+
 ### TODO
 有几个功能毕设期间就像加进去，不过当时相对毕设已经足够复杂了，而来当时与朋友创业做另一个项目时间并不算富裕，也就没有继续开发了。
 - 集成云存储
