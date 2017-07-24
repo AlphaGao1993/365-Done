@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--取消默认的头布局与菜单之间的空白-->
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+    <dimen name="nav_image_width_and_height">70dp</dimen>
+    <dimen name="fab_action_75">75dp</dimen>
+    <dimen name="fab_action_145">145dp</dimen>
+    <dimen name="fab_action_215">215dp</dimen>
+    <!--fab:-->
+    <dimen name="fab_width">54dp</dimen>
+    <dimen name="fab_action_menu_width">44dp</dimen>
+    <dimen name="fab_margin_end">30dp</dimen>
+    <dimen name="fab_margin_bottom">35dp</dimen>
+    <!--比大的 fab 中心位置稍高一些，防止阴影部分被看出来-->
+    <dimen name="fab_menu_margin_bottom">44dp</dimen>
+    <dimen name="fab_menu_margin_end">35dp</dimen>
+
+    <dimen name="tabIndicatorHeight">4dp</dimen>
+    <dimen name="tabLayoutHeight">40dp</dimen>
+</resources>

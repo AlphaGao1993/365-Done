@@ -1,0 +1,150 @@
+<resources>
+    <!--Application-->
+    <string name="app_name">365 Done</string>
+    <string name="iflytek_app_id">58be5b74</string>
+    <!--MainActivity-->
+    <string name="main_nav_inbox">收件箱</string>
+    <string name="main_nav_event">事务簿</string>
+    <string name="main_nav_memo">备忘录</string>
+    <string name="main_nav_context">情境</string>
+    <string name="main_nav_finish">已完成</string>
+    <string name="main_nav_trash">垃圾箱</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="past_today_title">看看那年的今天都做了什么</string>
+    <string name="past_today_content">那年今天做了 %1$d 件事情</string>
+
+
+    <!--InboxFragment-->
+    <string name="inbox_add_text_title">新增备忘内容</string>
+    <string name="inbox_add_text_positive">保存</string>
+    <string name="inbox_add_text_negative">放弃添加</string>
+    <string name="inbox_edit_text_title">编辑备忘内容</string>
+    <string name="inbox_edit_text_negative">放弃修改</string>
+    <string name="inbox_to_agenda">日程表</string>
+    <string name="inbox_to_todo">待办清单</string>
+    <string name="inbox_to_memo">备忘录</string>
+    <string name="inbox_to_trash">垃圾箱</string>
+    <string name="inbox_select_type">移动至</string>
+    <string name="inbox_select_positive">确定</string>
+    <string name="inbox_select_negative">取消</string>
+
+    <!--EventFragment-->
+    <array name="eventTypeList">
+        <item>日程表</item>
+        <item>待办清单</item>
+        <item>项目册</item>
+    </array>
+    <string-array name="finshTypeList">
+        <item>日程表</item>
+        <item>待办</item>
+    </string-array>
+
+    <!--NewAgendaActivity-->
+    <string name="new_agenda_label">添加至日程表</string>
+    <string name="customize_alarm_title">自定义提醒重复</string>
+    <string name="selected_customize_alarm">事件将每 %1$d %2$s 重复</string>
+    <string name="select_alarm_ok">确定</string>
+    <string name="select_alarm_cancle">取消</string>
+    <string name="save_alarm_to_database">保存至重复列表</string>
+    <string name="delete_from_alarm_title">是否要删除该提醒？</string>
+    <string name="delete_from_alarm_ok">删除</string>
+    <string name="delete_from_alarm_no">继续保留</string>
+    <string name="delete_from_alarm_tip">提醒已删除</string>
+    <string name="delete_from_alarm_back">撤销删除</string>
+    <string name="delete_from_alarm_back_tip">已恢复刚才删除的提醒</string>
+    <string name="set_need_time_title">选择事件将持续的时间</string>
+    <string name="set_need_time_ok">确定</string>
+    <string name="agenda_detail">日程详情</string>
+    <string name="exec_modify">执行修改</string>
+    <string name="choose_relative_context">请选择关联情境~</string>
+    <string name="per_num_time">每 %1$d %2$s</string>
+
+    <!--ContextFragment-->
+    <string name="sure_delete_context">该情境下无相关事项，是否删除该情境？</string>
+    <string name="delete_context_error">该情境下尚有关联事项，无法删除</string>
+
+    <!--NewContextActivity-->
+    <string name="new_context_label">新建情境</string>
+    <string name="save_context_done">%1$s 已经添加到您的情境列表</string>
+
+    <!--NewTodoActivity-->
+    <string name="new_todo_label">添加至待办清单</string>
+    <string name="dialog_need_time_title">设置待办持续时间</string>
+    <string name="new_todo_ok">待办添加成功~</string>
+
+    <string name="memo_folder_label">选择备忘文件夹</string>
+
+    <!--MemoFragment-->
+    <string name="memo_count">(%1$d)</string>
+
+    <!--NewMemoFolderFragment-->
+    <string name="new_memo_folder_label">添加备忘录文件夹</string>
+    <string name="new_folder">新建文件夹</string>
+    <string name="finish_choose_folder">完成</string>
+
+    <!-- Strings related to account -->
+    <string name="prompt_email">邮箱</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_register">注册</string>
+    <string name="action_sign_in_short">登录</string>
+    <string name="error_invalid_email">邮箱地址不合法</string>
+    <string name="error_not_exist_email">该邮箱尚未注册</string>
+    <string name="error_exist_email">该邮箱已经被注册</string>
+    <string name="error_invalid_password">密码不能少于 4 位</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">必填</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="sign_out_error">注册失败，请稍后再试~"</string>
+    <string name="title_activity_login_two">Sign in</string>
+
+    <!--SettingsActivity-->
+    <string name="title_activity_settings">账号与设置</string>
+    <string name="setting_dialog_image_title">设置头像</string>
+    <string name="sign_out">退出</string>
+    <string name="sure_to_exit">您确定要退出登录吗？</string>
+    <string name="request_permission_error_picture">权限请求失败~，无法获取照片</string>
+    <string name="request_permission_error_capture">权限请求失败~，无法进行拍照</string>
+
+    <!--AppConfigActivity-->
+    <string name="title_activity_app_config">应用配置</string>
+    <string name="showPastEventInMonth_true">过去的日程也会显示在月历中</string>
+    <string name="showPastEventInMonth_false">过去的日程不会显示在月历中</string>
+    <string name="startPastToday_true">每天第一次打开应用提醒往年今天的事件</string>
+    <string name="startPastToday_false">不显示往年今天的事件</string>
+    <string name="startAgendaAlarm_true">开启</string>
+    <string name="startAgendaAlarm_false">关闭</string>
+    <string name="speechHasSymbol_true">不添加标点符号</string>
+    <string name="speechHasSymbol_false">智能添加标点符号</string>
+    <string name="inboxClearAlarm_true">每天 21:30 提醒</string>
+    <string name="inboxClearAlarm_false">不进行提醒</string>
+
+    <!--PastTodayActivity-->
+    <string name="title_activity_past_today">那年今日</string>
+
+    <!--AccountActivity-->
+    <string name="title_activity_account">账号信息</string>
+
+
+    <!--Business-->
+    <string name="create_at">创建于 %1$s</string>
+    <string name="delete_at">删除于 %1$s</string>
+    <string name="left_inbox">您今天尚有 %1$d 条信息尚未清理</string>
+    <string name="new_agenda_ticker">您有一项新日程~</string>
+    <string name="clear_today_inbox">今日清理</string>
+    <string name="nic_name">昵称</string>
+    <string name="nic_name_null">昵称</string>
+    <string name="positive_sure">确定</string>
+    <string name="negative_cancle">取消</string>
+    <string name="modify_password">修改密码</string>
+    <string name="old_password_error">原始密码错误~</string>
+    <string name="new_pwd_new_login">密码修改成功，需要重新登录~</string>
+    <string name="modify_email">修改邮箱</string>
+    <string name="modify_email_success">修改邮箱成功~</string>
+    <string name="email_format_error">请检查邮箱格式或者更换一个邮箱地址</string>
+    <string name="password_error">密码不正确</string>
+
+</resources>

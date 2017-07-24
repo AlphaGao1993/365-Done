@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBackground">
+
+    <com.alphagao.done365.widget.SwipeRecyclerView
+        android:id="@+id/inbox_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/inbox_action_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee"
+        android:visibility="gone" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_action_voice"
+        style="@style/fab_action_menu"
+        android:src="@mipmap/fab_action_voice_white_24dp"
+        app:backgroundTint="@android:color/holo_orange_light"
+        app:layout_anchor="@id/inbox_list"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_action_text"
+        style="@style/fab_action_menu"
+        android:src="@mipmap/fab_action_text_white_24dp"
+        app:backgroundTint="@android:color/holo_green_light"
+        app:layout_anchor="@id/inbox_list"
+        app:layout_anchorGravity="bottom|end" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/inbox_action_add"
+        android:layout_width="@dimen/fab_width"
+        android:layout_height="@dimen/fab_width"
+        android:layout_marginBottom="@dimen/fab_margin_bottom"
+        android:layout_marginEnd="@dimen/fab_margin_end"
+        android:src="@mipmap/ic_add_white_48dp"
+        app:layout_anchor="@id/inbox_list"
+        app:layout_anchorGravity="bottom|end" />
+    <!--app:layout_behavior="com.alphagao.done365.view.ScrollAwareBehavior"-->
+</android.support.design.widget.CoordinatorLayout>

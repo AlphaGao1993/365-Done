@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--修改默认的按钮背景色-->
+        <item name="android:colorButtonNormal">@color/colorPrimary</item>
+        <!--修改默认 Activity 转场动画-->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--修改默认的按钮背景色-->
+        <item name="android:colorButtonNormal">@color/colorPrimary</item>
+        <!--修改默认 Activity 转场动画-->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
+    </style>
+    <!--侧滑面板字体大小-->
+    <style name="Nav_MenuItem_Style">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--fab 菜单按钮的主题-->
+    <style name="fab_action_menu">
+        <item name="android:layout_width">@dimen/fab_action_menu_width</item>
+        <item name="android:layout_height">@dimen/fab_action_menu_width</item>
+        <item name="android:layout_marginBottom">@dimen/fab_menu_margin_bottom</item>
+        <item name="android:layout_marginEnd">@dimen/fab_menu_margin_end</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <!--侧滑菜单的统一主题-->
+    <style name="inbox_swipe_menu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@color/colorTitleText</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Activity 转场动画-->
+    <style name="ActivityAnimation" parent="@android:style/Animation.Translucent">
+        <item name="android:taskOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <!--有点击效果的 layout 主题-->
+    <style name="clickableLayoutTheme">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="TreeNodeStyleDivider">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:showDividers">middle|beginning</item>
+        <item name="android:divider">@drawable/divider_horizontal_bright</item>
+    </style>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayBackground">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.alphagao.done365.widget.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBackground">
+
+                <RelativeLayout
+                    android:id="@+id/personal_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/clickableLayoutTheme"
+                    android:padding="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/head_image_view"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/m06" />
+
+                    <TextView
+                        android:id="@+id/user_name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/head_image_view"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_edit_green_24dp"
+                        android:text="Alphagao"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/user_email_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_name_view"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@id/head_image_view"
+                        android:text="498662779@qq.com"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/custom_festival_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_customize_festival_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    style="@style/clickableLayoutTheme"
+                    android:text="我的节日"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="55dp"
+                    android:background="@color/colorTreeDivider" />
+
+                <TextView
+                    android:id="@+id/past_today_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_done_all_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    style="@style/clickableLayoutTheme"
+                    android:text="那年今日"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="55dp"
+                    android:background="@color/colorTreeDivider" />
+
+
+                <TextView
+                    android:id="@+id/settings_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_settings_black_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    style="@style/clickableLayoutTheme"
+                    android:text="设置"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="55dp"
+                    android:background="@color/colorTreeDivider" />
+
+                <TextView
+                    android:id="@+id/log_out_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_log_out_24dp"
+                    android:drawablePadding="10dp"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    style="@style/clickableLayoutTheme"
+                    android:text="注销"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.alphagao.done365.widget.StickyScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alphagao.done365">
+
+    <!-- 连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!--拍照设置头像-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--从相册读取照片设置头像-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--震动提醒-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/done365"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <!-- 用于接收其他 app 分享的文本信息 -->
+                <action android:name="android.intent.action.SEND" />
+                <data android:mimeType="text/plain" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.NewAgendaActivity"
+            android:label="@string/new_agenda_label" />
+        <activity
+            android:name=".ui.activity.NewContextActivity"
+            android:label="@string/new_context_label" />
+        <activity
+            android:name=".ui.activity.NewTodoActivity"
+            android:label="@string/new_todo_label" />
+        <activity android:name=".ui.activity.SingleFragmentActivity" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/MyTheme" />
+        <activity
+            android:name=".ui.activity.AppConfigActivity"
+            android:label="@string/title_activity_app_config" />
+        <activity
+            android:name=".ui.activity.PastTodayActivity"
+            android:label="@string/title_activity_past_today" />
+        <activity
+            android:name=".ui.activity.AccountActivty"
+            android:label="@string/title_activity_account" />
+        <activity android:name=".ui.activity.SearchActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.alphagao.done365.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".service.AlarmService" />
+
+        <receiver android:name=".receiver.AlarmReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.android.alarmclock.ALARM_LAERT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#607D8B</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorDivider">#B3E5FF</color>
+    <color name="colorSecondTitleText">#BDBDBD</color>
+    <color name="colorTitleText">#FFFFFF</color>
+    <color name="colorTreeDivider">#eeeeee</color>
+    <color name="colorLightBackground">#ffffff</color>
+    <color name="colorGrayBackground">#eeeeee</color>
+    <color name="colorLabelText">#757575</color>
+    <color name="colorOrdinaryText">#313131</color>
+    <color name="inbox_swipe_delete_color">#FF2222</color>
+    <color name="date_picker_rest_day">#FF9E80</color>
+    <color name="layout_bg_color">#e0e0e0</color>
+    <color name="date_picker_bg">#66CDAA</color>
+    <color name="text_highlight_color">#FF2222</color>
+</resources>

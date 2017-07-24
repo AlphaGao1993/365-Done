@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/sync"
+        android:icon="@mipmap/ic_sync"
+        android:title="同步"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/search"
+        android:icon="@mipmap/ic_search"
+        android:title="搜索"
+        app:showAsAction="always" />
+    <group
+        android:id="@+id/group_project"
+        android:visible="false">
+        <item
+            android:id="@+id/addProj"
+            android:icon="@mipmap/ic_new_proj"
+            android:title="新建项目"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/newProFolder"
+            android:icon="@mipmap/ic_new_folder"
+            android:title="新建项目集"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_inbox" />
+    <group
+        android:id="@+id/group_agenda"
+        android:visible="false">
+        <item
+            android:id="@+id/agenda_sort"
+            android:icon="@mipmap/ic_sort"
+            android:title="排序"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/agenda_canlendar_list"
+            android:title="列表"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/agenda_calendar_today"
+            android:title="今日"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/agenda_calendar_week"
+            android:title="未来三天"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/agenda_calendar_month"
+            android:title="月视图"
+            app:showAsAction="never"/>
+    </group>
+    <group
+        android:id="@+id/group_todo"
+        android:visible="false">
+        <item
+            android:id="@+id/todo_sort"
+            android:icon="@mipmap/ic_sort"
+            android:title="排序"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_memo" />
+    <group
+        android:id="@+id/group_context"
+        android:visible="false">
+        <item
+            android:id="@+id/context_add"
+            android:title="新建情境"
+            app:showAsAction="never" />
+    </group>
+    <group android:id="@+id/group_agendaDone"
+        android:visible="false">
+        <item
+            android:id="@+id/agenda_done_sort"
+            android:title="已完成日程"
+            app:showAsAction="never"/>
+    </group>
+    <group android:id="@+id/group_todoDone"
+        android:visible="false">
+        <item
+            android:id="@+id/todo_done_sort"
+            android:title="已完成待办"
+            app:showAsAction="never"/>
+    </group>
+    <group android:id="@+id/group_trash" />
+</menu>

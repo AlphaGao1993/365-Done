@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/choose_done"
+        android:icon="@mipmap/ic_done"
+        android:title="完成"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/add_context"
+        android:icon="@mipmap/ic_add_white_48dp"
+        android:title="新建情境"
+        app:showAsAction="always" />
+</menu>

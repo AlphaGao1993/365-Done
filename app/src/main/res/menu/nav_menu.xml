@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_inbox"
+            android:title="@string/main_nav_inbox"
+            android:icon="@mipmap/nav_inbox_white_48dp"/>
+        <item android:id="@+id/nav_event"
+            android:title="@string/main_nav_event"
+            android:icon="@mipmap/nav_event_white_48pt"/>
+        <item android:id="@+id/nav_memo"
+            android:title="@string/main_nav_memo"
+            android:icon="@mipmap/nav_memo_white_48dp"/>
+        <item android:id="@+id/nav_context"
+            android:title="@string/main_nav_context"
+            android:icon="@mipmap/nav_sense_white_48dp"/>
+        <item android:id="@+id/nav_finish"
+            android:title="@string/main_nav_finish"
+            android:icon="@mipmap/nav_finish_white_48dp"/>
+        <item android:id="@+id/nav_trash"
+            android:title="@string/main_nav_trash"
+            android:icon="@mipmap/nav_trash_white_48dp"/>
+    </group>
+</menu>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_agenda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrayBackground"
+    tools:context=".ui.activity.NewAgendaActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.alphagao.done365.widget.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <EditText
+                android:id="@+id/agenda_content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBackground"
+                android:gravity="center_vertical"
+                android:minHeight="60dp"
+                android:padding="10dp"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorSecondTitleText" />
+
+                <LinearLayout
+                    android:id="@+id/agenda_need_view"
+                    style="@style/clickableLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="持续时间"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/agenda_need_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="1 小时"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorSecondTitleText" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/setDateView"
+                    style="@style/clickableLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="设置提醒"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/alarm_dateTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hideDatePickerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/colorSecondTitleText" />
+
+                    <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                        android:id="@+id/dateTime_picker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorLightBackground"
+                        app:picker_curved="true"
+                        app:picker_cyclic="true"
+                        app:picker_mustBeOnFuture="true"
+                        app:picker_textSize="18sp"
+                        app:picker_visibleItemCount="7" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorSecondTitleText" />
+
+                <LinearLayout
+                    android:id="@+id/alarm_repeat_type"
+                    style="@style/clickableLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="重复"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/agenda_alarm_type_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="end"
+                        android:padding="15dp"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hideAlarmType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorSecondTitleText" />
+
+                <com.alphagao.done365.widget.StickyListView
+                    android:id="@+id/alarm_type_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="20dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/colorSecondTitleText" />
+
+                <TextView
+                    android:id="@+id/agenda_alarm_customize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/clickableLayoutTheme"
+                    android:drawableEnd="@mipmap/ic_right_grey_24dp"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:padding="15dp"
+                    android:paddingStart="20dp"
+                    android:text="自定义"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorSecondTitleText" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/agenda_add_context"
+                    style="@style/clickableLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:gravity="start"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="添加情境"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/agenda_selected_context"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="false"
+                        android:gravity="end"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorSecondTitleText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLightBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorSecondTitleText" />
+
+                <LinearLayout
+                    android:id="@+id/select_project_view"
+                    style="@style/clickableLayoutTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:text="所属项目"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/select_project"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:drawablePadding="10dp"
+                        android:gravity="end"
+                        android:padding="15dp"
+                        android:paddingStart="20dp"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorSecondTitleText" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <Switch
+                android:id="@+id/agenda_vibrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_selected_bg"
+                android:padding="15dp"
+                android:paddingStart="20dp"
+                android:text="提醒震动"
+                android:textColor="@color/colorLabelText"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorSecondTitleText" />
+
+            <Button
+                android:id="@+id/add_agenda_to_list"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:text="确认添加日程"
+                android:textColor="@color/colorTitleText"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/add_agenda_to_finish"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="事件已完成"
+                android:visibility="gone"
+                android:textColor="@color/colorTitleText"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </com.alphagao.done365.widget.StickyScrollView>
+</android.support.design.widget.CoordinatorLayout>

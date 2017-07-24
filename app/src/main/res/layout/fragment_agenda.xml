@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorLightBackground">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/agenda_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.github.tibolte.agendacalendarview.AgendaCalendarView
+        android:id="@+id/calendar_day_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:agendaCurrentDayTextColor="@color/theme_primary"
+        app:calendarColor="@color/theme_primary"
+        app:calendarCurrentDayTextColor="@color/calendar_text_current_day"
+        app:calendarDayTextColor="@color/theme_text_icons"
+        app:calendarHeaderColor="@color/theme_primary_dark"
+        app:calendarPastDayTextColor="@color/theme_light_primary"
+        app:fabColor="@color/theme_accent"/>
+
+    <com.alamkanak.weekview.WeekView
+        android:id="@+id/weekLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:eventTextColor="@android:color/white"
+        app:textSize="12sp"
+        app:hourHeight="60dp"
+        app:headerColumnPadding="8dp"
+        app:headerColumnTextColor="#8f000000"
+        app:headerRowPadding="12dp"
+        app:columnGap="8dp"
+        app:noOfVisibleDays="1"
+        app:headerRowBackgroundColor="#ffefefef"
+        app:dayBackgroundColor="#05000000"
+        app:todayBackgroundColor="#1848adff"
+        app:nowLineColor="@color/inbox_swipe_delete_color"
+        app:headerColumnBackground="#ffffffff"/>
+    <cn.aigestudio.datepicker.views.DatePicker
+        android:id="@+id/monthLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>

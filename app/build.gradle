@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.alphagao.done365"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+greendao {
+    schemaVersion 1     //数据库版本
+    daoPackage 'com.alphagao.done365.greendao.gen' //生成的源文件包路径
+    targetGenDir 'src/main/java' //生成的数据库路径
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //黄油刀注入框架
+    //圆形图片
+    //数据库ORM映射框架
+    //带农历日期选择器
+    //简单轮式日期时间选择器
+    //Activity 滑动转场动画
+    //轮式选择器
+    //树型结构视图
+    //圆环进度条
+    //日历日视图
+    //周日历视图
+    compile files('libs/Msc.jar')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.jakewharton:butterknife:8.2.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    compile 'com.github.florent37:singledateandtimepicker:1.0.8'
+    compile 'com.r0adkll:slidableactivity:2.0.5'
+    compile 'cn.carbswang.android:NumberPickerView:1.1.1'
+    compile 'com.github.bmelnychuk:atv:1.2.+'
+    compile 'com.github.lzyzsd:circleprogress:1.2.1'
+    compile 'com.github.tibolte:agendacalendarview:1.0.4'
+    compile 'com.github.alamkanak:android-week-view:1.2.6'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:25.3.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:25.3.1'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}
